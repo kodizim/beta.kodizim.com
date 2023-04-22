@@ -1,29 +1,20 @@
-const {
-  withModuleFederation,
-} = require("@module-federation/nextjs-mf");
+const NextFederationPlugin = require('@module-federation/nextjs-mf');
 
 module.exports = {
-    future: { webpack5: true },
-    images: {
-        domains: ['kodizi.com'],
-    },
-    webpack: (config, options) => {
-        const mfConf = {
-            name: "composer",
-            library: {
-                type: config.output.libraryTarget,
-                name: "composer",
-            },
-            remotes: {
-                app1: "app1",
-                app2: "app2",
-            },
-            exposes: {
-            },
-        };
-        config.cache = false;
-        withModuleFederation(config, options, mfConf);
+    webpack(config, options) {
+        if (!options.isServer) {
+            config.plugins.push(
+                new NextFederationPlugin({
+                    name: 'composer',
+                    filename: 'static/chunks/remoteEntry.js',
+                    remotes: {
+                        kodizimEvents: 'kodizimEvents@http://localhost:3001/_next/static/chunks/remoteEntry.js',
+                    },
+                    shared: {},
+                }),
+            );
+        }
 
         return config;
     },
-}
+};
