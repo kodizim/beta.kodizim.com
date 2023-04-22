@@ -1,0 +1,40 @@
+{
+  "name": "beta.kodizim.com",
+  "private": true,
+  "scripts": {
+    "build:pkg": "pnpm run prepare -r"
+  },
+  "packageManager": "pnpm@7.0.0",
+  "engines": {
+    "node": ">=16"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "turbo": {
+    "npmClient": "pnpm",
+    "pipeline": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "dist/**",
+          ".umi/**",
+          ".next/**"
+        ]
+      },
+      "deploy": {
+        "dependsOn": [
+          "build"
+        ]
+      },
+      "dev": {
+        "cache": false
+      }
+    }
+  }
+}
