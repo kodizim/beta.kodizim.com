@@ -61,6 +61,26 @@ importers:
       tsconfig: link:../../packages/tsconfig
       typescript: 4.9.3
 
+  apps/kodizim-digital-garden:
+    specifiers:
+      autoprefixer: 10.4.14
+      eslint: ^7.32.0
+      eslint-config-next: 13.3.1
+      next: 13.3.1
+      postcss: 8.4.23
+      react: 18.2.0
+      react-dom: ^18.2.0
+      tailwindcss: 3.3.1
+    dependencies:
+      autoprefixer: 10.4.14_postcss@8.4.23
+      eslint: 7.32.0
+      eslint-config-next: 13.3.1_77fvizpdb3y4icyeo2mf4eo7em
+      next: 13.3.1_biqbaboplfbrettd7655fr4n2y
+      postcss: 8.4.23
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      tailwindcss: 3.3.1_postcss@8.4.23
+
   apps/kodizim-events:
     specifiers:
       '@module-federation/nextjs-mf': ^6.4.0
@@ -84,6 +104,46 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       tailwindcss: 3.3.1_postcss@8.4.23
       webpack: 5.80.0
+
+  apps/kodizim-mentor-mentee:
+    specifiers:
+      autoprefixer: 10.4.14
+      eslint: ^7.32.0
+      eslint-config-next: 13.3.1
+      next: 13.3.1
+      postcss: 8.4.23
+      react: 18.2.0
+      react-dom: ^18.2.0
+      tailwindcss: 3.3.1
+    dependencies:
+      autoprefixer: 10.4.14_postcss@8.4.23
+      eslint: 7.32.0
+      eslint-config-next: 13.3.1_77fvizpdb3y4icyeo2mf4eo7em
+      next: 13.3.1_biqbaboplfbrettd7655fr4n2y
+      postcss: 8.4.23
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      tailwindcss: 3.3.1_postcss@8.4.23
+
+  apps/kodizim-open-source-place:
+    specifiers:
+      autoprefixer: 10.4.14
+      eslint: ^7.32.0
+      eslint-config-next: 13.3.1
+      next: 13.3.1
+      postcss: 8.4.23
+      react: 18.2.0
+      react-dom: ^18.2.0
+      tailwindcss: 3.3.1
+    dependencies:
+      autoprefixer: 10.4.14_postcss@8.4.23
+      eslint: 7.32.0
+      eslint-config-next: 13.3.1_77fvizpdb3y4icyeo2mf4eo7em
+      next: 13.3.1_biqbaboplfbrettd7655fr4n2y
+      postcss: 8.4.23
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      tailwindcss: 3.3.1_postcss@8.4.23
 
   apps/web:
     specifiers:
