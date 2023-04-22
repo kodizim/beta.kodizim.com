@@ -8,8 +8,8 @@ module.exports = {
                     name: 'composer',
                     filename: 'static/chunks/remoteEntry.js',
                     remotes: {
-                        kodizimEvents: 'kodizimEvents@http://localhost:3001/_next/static/chunks/remoteEntry.js',
-                        /*kodizimEvents: 'kodizimEvents@https://beta-kodizim-com-kodizim-events.vercel.app/_next/static/chunks/remoteEntry.js',*/
+                        /*kodizimEvents: 'kodizimEvents@http://localhost:3001/_next/static/chunks/remoteEntry.js',*/
+                        kodizimEvents: 'kodizimEvents@https://beta-kodizim-com-kodizim-events.vercel.app/_next/static/chunks/remoteEntry.js',
                     },
                     shared: {},
                 }),
