@@ -1,14 +1,16 @@
-# Turborepo starter
+# Beta Kodizim Platform
+<img width="1523" alt="Screenshot 2023-04-22 at 14 02 32" src="https://user-images.githubusercontent.com/56169582/233781402-2750436f-1b82-4690-b00e-d274db7fe4a2.png">
 
+
+# Welcome 🎉
+[**Beta Kodizim**](https://beta.kodizim.com) Platform using [Next.js](https://nextjs.org/), [Module Federation](https://webpack.js.org/concepts/module-federation/) and, [Jrontend](http://micro.jrontend.com/).
 This is an official starter Turborepo.
 
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
+# TODO: Fragments
+- [ ] Digital Garden
+- [ ] Events
+- [ ] Mentor & Mentee
+- [ ] Open Source Place
 
 ## What's inside?
 
