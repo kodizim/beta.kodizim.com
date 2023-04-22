@@ -1,22 +1,12 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
-
-import dynamic from 'next/dynamic'
-
-const RemoteMario = dynamic(
-    () => import("kodizimEvents/mario"),
-    { ssr: false }
-)
+import {Cabin} from 'next/font/google'
+import Layout from "@/components/Layout";
+import Main from "@/components/Main";
 
 export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-        This is a Composer page
-        <RemoteMario />
-    </main>
-  )
+    return (
+        <Layout>
+            <div className="background-image"></div>
+            <Main/>
+        </Layout>
+    )
 }
