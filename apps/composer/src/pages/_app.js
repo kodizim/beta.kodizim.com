@@ -8,7 +8,7 @@ const cabin = Cabin({
 })
 export default function App({Component, pageProps}) {
     return (
-        <main className={`${cabin.className}`}>
+        <main className={`${cabin.className} relative`}>
             <Navbar/>
             <Component {...pageProps} />
         </main>

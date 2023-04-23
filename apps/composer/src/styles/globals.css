@@ -3,63 +3,52 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+    ) rgb(var(--background-start-rgb));
 }
 
 .background-image {
-  position: absolute;
-  width: 100%;
-  height: fit-content;
-  min-height: 100vh;
-  top: 0;
-  left: 0;
-  right: 10px;
-  background-image: url('/bg.png');
-/*  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;*/
-  z-index: -10;
+    position: absolute;
+    /*width: 100%;*/
+    height: fit-content;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url('/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -10;
 }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.outline-tex {
+    font: 800 250px Arial;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #34F5C6;
 }
 
-.animate-marquee {
-  animation: marquee 20s linear infinite;
-  font-size: 260px; /* Reduced font size */
-  display: inline-block;
-}
-
-.outline-text {
-  font-weight: bold;
-  -webkit-text-stroke: 4px #34F5C6;
-  text-stroke: 4px #34F5C6;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+@media screen and (max-width: 768px){
+    .outline-tex {
+        font: 800 70px Arial;
+        margin-top: 10px;
+    }
 }

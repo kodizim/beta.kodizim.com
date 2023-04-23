@@ -24,6 +24,7 @@ importers:
       postcss: 8.4.23
       react: 18.2.0
       react-dom: ^18.2.0
+      react-fast-marquee: ^1.4.0
       react-feather: ^2.0.10
       tailwindcss: 3.3.1
     dependencies:
@@ -35,6 +36,7 @@ importers:
       postcss: 8.4.23
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      react-fast-marquee: 1.4.0_biqbaboplfbrettd7655fr4n2y
       react-feather: 2.0.10_react@18.2.0
       tailwindcss: 3.3.1_postcss@8.4.23
 
@@ -2722,6 +2724,16 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-fast-marquee/1.4.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-aSjfFV6TaQkUsGBE9d1j3LhudPXKDoywLU1Ky2xke4IchHHqAtmXMAPqjnCPdSsvlOZSMuPAbIHN+EciqPCZWQ==}
+    peerDependencies:
+      react: '>= 16.8.0 || 18.0.0'
+      react-dom: '>= 16.8.0 || 18.0.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react-feather/2.0.10_react@18.2.0:
