@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Proje 1",
+    "description": "Bu, Proje 1'in açıklamasıdır.",
+    "languages": ["JavaScript", "React"],
+    "stars": 25
+  },
+  {
+    "id": 2,
+    "name": "Proje 2",
+    "description": "Bu, Proje 2'nin açıklamasıdır.",
+    "languages": ["Python", "Flask"],
+    "stars": 40
+  },
+  {
+    "id": 3,
+    "name": "Proje 3",
+    "description": "Bu, Proje 3'ün açıklamasıdır.",
+    "languages": ["Java", "Spring Boot"],
+    "stars": 15
+  },
+  {
+    "id": 4,
+    "name": "Proje 4",
+    "description": "Bu, Proje 4'in açıklamasıdır.",
+    "languages": ["JavaScript", "React"],
+    "stars": 25
+  },
+  {
+    "id": 5,
+    "name": "Proje 5",
+    "description": "Bu, Proje 5'nin açıklamasıdır.",
+    "languages": ["Python", "Flask"],
+    "stars": 40
+  },
+  {
+    "id": 6,
+    "name": "Proje 6",
+    "description": "Bu, Proje 6'ün açıklamasıdır.",
+    "languages": ["Java", "Spring Boot"],
+    "stars": 15
+  }
+]
