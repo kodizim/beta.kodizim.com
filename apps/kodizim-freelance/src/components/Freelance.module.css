@@ -1,0 +1,88 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.searchBar {
+    width: calc(100% - 120px);
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #5AFFC9;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.searchBar::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.addButton {
+    width: 100px;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #5AFFC9;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.addButton:hover {
+    background-color: #266752;
+    color: #fff;
+}
+.addButton:hover {
+    background-color: #2980b9;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableHeader,
+.tableRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tableHeader {
+    font-weight: 600;
+}
+
+.tableColumn {
+    padding: 0 12px;
+}
+
+.tableRow:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.eventImage {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+}

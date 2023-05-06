@@ -7,10 +7,10 @@ module.exports = {
     if (!options.isServer) {
       config.plugins.push(
           new NextFederationPlugin({
-            name: 'kodizimDigitalGarden',
+            name: 'kodizimFreelance',
             filename: 'static/chunks/remoteEntry.js',
             exposes: {
-              "./DigitalGarden": "./src/components/DigitalGarden",
+              "./Freelance": "./src/components/Freelance",
             },
             shared: {},
           }),

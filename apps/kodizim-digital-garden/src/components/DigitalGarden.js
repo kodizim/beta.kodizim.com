@@ -1,51 +1,64 @@
-// DigitalGarden.js
-import React, { useState, useEffect } from "react";
-import projectsData from "./projects.json";
+import { useState, useEffect } from "react";
+import styles from "./DigitalGarden.module.css";
 
 const DigitalGarden = () => {
     const [projects, setProjects] = useState([]);
+    const [search, setSearch] = useState("");
+
+    const fetchProjects = async () => {
+        const response = await fetch("https://api.github.com/users/kodizim/repos");
+        const data = await response.json();
+        setProjects(data);
+    };
 
     useEffect(() => {
-        // Burada gerçek API çağrısı yapılabilir, ancak mock veri için JSON dosyasını kullanıyoruz
-        setProjects(projectsData);
+        fetchProjects();
     }, []);
 
+    const filteredProjects = projects.filter((project) =>
+        project.name.toLowerCase().includes(search.toLowerCase())
+    );
+
     return (
-        <div className="container mx-auto">
-            <h1 className="text-4xl font-bold mb-8">Digital Garden</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {projects.map((project) => (
-                    <div
-                        key={project.id}
-                        className="border border-gray-300 rounded-lg p-4"
-                    >
-                        <h2 className="text-2xl font-semibold mb-2">{project.name}</h2>
-                        <p className="text-gray-600 mb-4">{project.description}</p>
-                        <div className="flex justify-between">
-                            <div className="flex flex-wrap">
-                                {project.languages.map((language, index) => (
-                                    <span
-                                        key={index}
-                                        className="bg-blue-500 text-white px-2 py-1 mr-2 mb-2 rounded"
-                                    >
-                    {language}
-                  </span>
-                                ))}
+        <div className={styles.container}>
+            <h1 className={styles.title}>Digital Garden</h1>
+            <div className={styles.toolbar}>
+                <input
+                    className={styles.searchBar}
+                    type="text"
+                    placeholder="Search..."
+                    onChange={(e) => setSearch(e.target.value)}
+                />
+                <button className={styles.addButton} onClick={() => window.open("https://github.com/kodizim")}>Proje Ekle</button>
+            </div>
+            <div className={styles.grid}>
+                {filteredProjects?.map((project) => (
+                    <div className={`${styles.project}`} key={project.id}>
+                        <div className={`${styles.card}`}>
+                            <div className={`${styles.cardHeader}`}>
+                                <h5 className={`${styles.cardTitle}`}>{project.name}</h5>
+                                <span className={`${styles.stars}`}>
+                  ⭐ {project.stargazers_count}
+                </span>
                             </div>
-                            <div className="flex items-center">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5 text-yellow-500 mr-1"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
+                            <div className={`${styles.cardBody}`}>
+                                <p className={`${styles.cardText}`}>{project.description}</p>
+                                <div className={`${styles.info}`}>
+                  <span className={`${styles.issues}`}>
+                    🐞 {project.open_issues_count} Issues
+                  </span>
+                                    <span className={`${styles.contributors}`}>
+                    👥 {project.contributors_url.length} Contributors
+                  </span>
+                                </div>
+                                <a
+                                    className={`${styles.cardLink}`}
+                                    href={project.html_url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
-                                    <path
-                                        fillRule="evenodd"
-                                        d="M10 2a8 8 0 100 16 8 8 0 000-16zm3.32 10.66a1 1 0 01-1.414 1.415l-2.829-2.828a1 1 0 010-1.415l2.828-2.828a1 1 0 011.414 1.414L9.586 10l2.828 2.828z"
-                                        clipRule="evenodd"
-                                    />
-                                </svg>
-                                <span>{project.stars}</span>
+                                    View on GitHub
+                                </a>
                             </div>
                         </div>
                     </div>

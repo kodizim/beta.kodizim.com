@@ -10,7 +10,7 @@ module.exports = {
             name: 'kodizimEvents',
             filename: 'static/chunks/remoteEntry.js',
             exposes: {
-              "./mario": "./src/components/Mario",
+              "./Events": "./src/components/Events",
             },
             shared: {},
           }),

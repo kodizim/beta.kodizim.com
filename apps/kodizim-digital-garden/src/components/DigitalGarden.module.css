@@ -1,0 +1,119 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    padding: 8px;
+    height: 200px;
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.stars {
+    font-size: 16px;
+    color: #f1c40f;
+}
+
+.card-text {
+    font-size: 16px;
+
+    margin-bottom: 16px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.issues,
+.contributors {
+    font-size: 14px;
+}
+
+.cardLink {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.searchBar {
+    width: calc(100% - 120px);
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #5AFFC9;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.searchBar::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.addButton {
+    width: 100px;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #5AFFC9;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.addButton:hover {
+    background-color: #266752;
+    color: #fff;
+}

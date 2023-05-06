@@ -1,7 +1,12 @@
-function DigitalGarden(props) {
-    return (
-        <div>Digital Garden</div>
-    );
-}
+import dynamic from 'next/dynamic'
 
-export default DigitalGarden;
+const RemoteDigitalGarden = dynamic(
+    () => import("kodizimDigitalGarden/DigitalGarden"),
+    {ssr: false}
+)
+
+export default function DigitalGarden() {
+    return (
+        <RemoteDigitalGarden/>
+    )
+}
