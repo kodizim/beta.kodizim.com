@@ -1,9 +1,12 @@
-import React from 'react';
+import dynamic from 'next/dynamic'
 
-function Freelance(props) {
+const RemoteFreelance = dynamic(
+    () => import("kodizimFreelance/Freelance"),
+    {ssr: false}
+)
+
+export default function Freelance() {
     return (
-        <div>Freelance</div>
-    );
+        <RemoteFreelance/>
+    )
 }
-
-export default Freelance;
