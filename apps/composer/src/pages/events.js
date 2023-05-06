@@ -8,7 +8,7 @@ const RemoteMario = dynamic(
 export default function Events() {
     return (
         <div>
-            <RemoteMario />
+            {/*<RemoteMario />*/}
         </div>
     )
 }

@@ -17,10 +17,11 @@ export default function Navbar() {
 
                     {/* Navbar Links */}
                     <ul className={`md:flex space-x-6 items-center ${menuOpen ? 'flex' : 'hidden'} flex-col md:flex-row md:space-x-6 md:items-center md:flex`}>
-                        <li><a href="/" className="text-gray-100 hover:text-primary py-1 md:py-0">Digital Bahçe</a></li>
-                        <li><a href="/" className="text-gray-100 hover:text-primary py-1 md:py-0">Mentor/Mentee</a></li>
+                        <li><a href="/digital-garden" className="text-gray-100 hover:text-primary py-1 md:py-0">Digital Bahçe</a></li>
+                        <li><a href="/mentor" className="text-gray-100 hover:text-primary py-1 md:py-0">Mentor</a></li>
+                        <li><a href="/mentee" className="text-gray-100 hover:text-primary py-1 md:py-0">Mentee</a></li>
                         <li><a href="/events" className="text-gray-100 hover:text-primary py-1 md:py-0">Etkinlikler</a></li>
-                        <li><a href="/" className="text-gray-100 hover:text-primary py-1 md:py-0">Açık Kaynak</a></li>
+                        <li><a href="/freelance" className="text-gray-100 hover:text-primary py-1 md:py-0">Freelance</a></li>
                     </ul>
 
                     {/* Button */}
